@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/kristjan/git/wow_fishing_bot/src/blob_tracker.cpp
-blob_tracker.h
-/home/kristjan/git/wow_fishing_bot/src/blob_tracker.h
-iostream
--
-
 /home/kristjan/git/wow_fishing_bot/src/blob_tracker.h
 opencv2/features2d.hpp
 /home/kristjan/git/wow_fishing_bot/src/opencv2/features2d.hpp
@@ -24,6 +18,12 @@ opencv2/highgui/highgui.hpp
 blob_tracker.h
 /home/kristjan/git/wow_fishing_bot/src/blob_tracker.h
 iostream
+-
+X11/Xlib.h
+-
+X11/X.h
+-
+X11/Xutil.h
 -
 
 /usr/local/include/opencv/cxcore.h

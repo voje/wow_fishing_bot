@@ -261,3 +261,105 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
+Change Dir: /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4247511811/fast"
+make[1]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4247511811.dir/build.make CMakeFiles/cmTryCompileExec4247511811.dir/build
+make[2]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4247511811.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec4247511811.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4247511811
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4247511811.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec4247511811.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4247511811 -rdynamic -lX11 -lXext 
+make[2]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3304178617/fast"
+make[1]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3304178617.dir/build.make CMakeFiles/cmTryCompileExec3304178617.dir/build
+make[2]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3304178617.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec3304178617.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3304178617
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3304178617.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec3304178617.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3304178617 -rdynamic 
+make[2]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4271879106/fast"
+make[1]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4271879106.dir/build.make CMakeFiles/cmTryCompileExec4271879106.dir/build
+make[2]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4271879106.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec4271879106.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4271879106
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4271879106.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec4271879106.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4271879106 -rdynamic 
+make[2]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3221870763/fast"
+make[1]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3221870763.dir/build.make CMakeFiles/cmTryCompileExec3221870763.dir/build
+make[2]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3221870763.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec3221870763.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3221870763
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3221870763.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec3221870763.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3221870763 -rdynamic 
+make[2]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1552429131/fast"
+make[1]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1552429131.dir/build.make CMakeFiles/cmTryCompileExec1552429131.dir/build
+make[2]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1552429131.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec1552429131.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1552429131
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1552429131.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec1552429131.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1552429131 -rdynamic 
+make[2]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4165218594/fast"
+make[1]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4165218594.dir/build.make CMakeFiles/cmTryCompileExec4165218594.dir/build
+make[2]: Entering directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4165218594.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec4165218594.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4165218594
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4165218594.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec4165218594.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4165218594 -rdynamic -lICE 
+make[2]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory `/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/CMakeTmp'
+
+
