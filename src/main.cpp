@@ -1,12 +1,22 @@
+#include "canny_tracker.h"
 #include "blob_tracker.h"
 #include <iostream>
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #include <X11/Xutil.h>
+#include <opencv2/imgproc.hpp>
+#include <string>
+#include <unistd.h>
 
 using namespace std;
 
 const string samples_folder = "../samples/";
+
+string my_int_to_string(int n){
+	stringstream ss;
+	ss << n;
+	return ss.str();
+}
 
 void ImageFromDisplay(Mat& out_img){
 	//this function is plagiarism
@@ -41,27 +51,54 @@ void ImageFromDisplay(Mat& out_img){
 }
 
 int main(int argc, char** argv){
-	//get test input
-	string input_img;
-	if(argc < 2){
-		input_img = "fishing1.png";
-	}else{
-		input_img = argv[1];
-	}
-	input_img = samples_folder + input_img;
-
-	BlobTracker bt;
+	//BlobTracker tracker;
+	CannyTracker tracker;
 	Mat frame;
 
-	frame = imread(input_img);
-	//bt.find_bobber(frame);	
+	if(argc >= 2){
+		for(int i=1; i<=atoi(argv[1]); i++){
+			string num(1,  char(i+48));
+			string pt1 = "fishing";
+			string pt2 = ".png";
+			string input_img = pt1 + num;
+			input_img = input_img + pt2;
+			input_img = samples_folder + input_img;
+			cout << input_img << endl;
+			frame = imread(input_img);
+			tracker.track_bobber(frame, true);
+			/*
+			circle(frame, tracker.get_bobber_point(), 4, Scalar(0,255,0));
+			imshow("test_show", frame);
+			waitKey(0);
+			*/
+		}
+		return 0;
+	}
 
-	//screenshot
-	Mat screenshot;
-	ImageFromDisplay(screenshot);
+	cout << "you have 3 seconds" << endl;
+	sleep(3);
 
-	imshow("ss", screenshot);
-	waitKey(0);
+	//if not testing
+	while(True){
+		//screenshot
+		ImageFromDisplay(frame);
+		cvtColor(frame, frame, CV_BGRA2BGR);
+
+		tracker.track_bobber(frame, false);	
+		cout << "(" << tracker.get_bobber_point() << ") [" << tracker.get_bobber_speed() << "]" << endl;
+		Point p = tracker.get_bobber_point();
+		if(p.x >= 0 && p.y >= 0){
+			string xstring = my_int_to_string(p.x);
+			string ystring = my_int_to_string(p.y);
+			string system_command = "bash ../key_press.sh MOUSEMOVE ";
+			system_command += xstring;
+			system_command += " ";
+			system_command += ystring;
+			system(system_command.c_str());
+		}
+
+		waitKey(300);	//delay in ms
+	}
 
 	return 0;
 }

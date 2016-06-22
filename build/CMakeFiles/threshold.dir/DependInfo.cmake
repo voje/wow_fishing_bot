@@ -4,9 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kristjan/git/wow_fishing_bot/src/blob_tracker.cpp" "/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/main.dir/blob_tracker.cpp.o"
-  "/home/kristjan/git/wow_fishing_bot/src/canny_tracker.cpp" "/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/main.dir/canny_tracker.cpp.o"
-  "/home/kristjan/git/wow_fishing_bot/src/main.cpp" "/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/main.dir/main.cpp.o"
+  "/home/kristjan/git/wow_fishing_bot/src/threshold.cpp" "/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/threshold.dir/threshold.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

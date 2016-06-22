@@ -1,1 +1,3 @@
+/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/canny.dir
 /home/kristjan/git/wow_fishing_bot/build/CMakeFiles/main.dir
+/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/threshold.dir

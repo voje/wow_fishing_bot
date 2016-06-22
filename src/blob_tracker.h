@@ -2,8 +2,8 @@
 #define _MY_BLOB_TRACKER_
 
 #include "opencv2/features2d.hpp"
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/highgui.hpp>
 
 using namespace cv;
 using namespace std;
@@ -15,8 +15,10 @@ private:
 	double bobber_speed;
 public:
 	BlobTracker();
-	void find_bobber(Mat&);
+	void track_bobber(Mat&);
 	void find_center_keypoint(Mat&, vector<KeyPoint>&);
+	Point get_bobber_point();
+	double get_bobber_speed();
 };
 
 #endif

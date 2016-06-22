@@ -12,8 +12,8 @@ BlobTracker::BlobTracker(){
 	SimpleBlobDetector::Params params;
 	 
 	// Change thresholds
-	params.minThreshold = 100;
-	params.maxThreshold = 255;
+	params.minThreshold = 10;
+	params.maxThreshold = 100;
 
 	// Filter by Area.
 	params.filterByArea = false;
@@ -21,11 +21,11 @@ BlobTracker::BlobTracker(){
 	 
 	// Filter by Circularity
 	params.filterByCircularity = true;
-	params.minCircularity = 0.7;
+	params.minCircularity = 0.5;
 	 
 	// Filter by Convexity
 	params.filterByConvexity = true;
-	params.minConvexity = 0.87;
+	params.minConvexity = 0.8;
 	 
 	// Filter by Inertia
 	params.filterByInertia = true;
@@ -33,7 +33,15 @@ BlobTracker::BlobTracker(){
 
 	this->sbd = SimpleBlobDetector::create(params);
 	this->bobber_point = Point(-1, -1);
-	this->bobber_speed = 0;
+	this->bobber_speed = -1;
+}
+
+Point BlobTracker::get_bobber_point(){
+	return Point(floor(bobber_point.x), floor(bobber_point.y));
+}
+
+double BlobTracker::get_bobber_speed(){
+	return bobber_speed;	
 }
 
 void BlobTracker::find_center_keypoint(Mat& frame, vector<KeyPoint>& kp){
@@ -54,16 +62,16 @@ void BlobTracker::find_center_keypoint(Mat& frame, vector<KeyPoint>& kp){
 	this->bobber_point = best_point;
 }
 
-void BlobTracker::find_bobber(Mat& frame){
+void BlobTracker::track_bobber(Mat& frame){
 	vector<KeyPoint> kp;
 	sbd->detect(frame, kp);
 	Mat frame_with_kp;
 	this->find_center_keypoint(frame, kp);
-	//drawKeypoints(frame, kp, frame_with_kp, Scalar(0,0,255), DrawMatchesFlags::DRAW_RICH_KEYPOINTS );
-	//imshow("test_show", frame_with_kp);	
-	circle(frame, this->bobber_point, 4, Scalar(0,255,0));
+	/*
+	drawKeypoints(frame, kp, frame, Scalar(0,0,255), DrawMatchesFlags::DRAW_RICH_KEYPOINTS);
 	imshow("test_show", frame);
 	waitKey(0);
+	*/
 }
 
 

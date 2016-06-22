@@ -6,20 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/home/kristjan/git/wow_fishing_bot/src/canny_tracker.cpp
-canny_tracker.h
-/home/kristjan/git/wow_fishing_bot/src/canny_tracker.h
-limits
+/home/kristjan/git/wow_fishing_bot/src/canny.cpp
+opencv2/imgproc/imgproc.hpp
+/home/kristjan/git/wow_fishing_bot/src/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/kristjan/git/wow_fishing_bot/src/opencv2/highgui/highgui.hpp
+stdlib.h
 -
-iostream
--
-
-/home/kristjan/git/wow_fishing_bot/src/canny_tracker.h
-opencv2/core.hpp
--
-opencv2/imgproc.hpp
--
-opencv2/highgui.hpp
+stdio.h
 -
 
 /usr/local/include/opencv/cxcore.h
@@ -308,6 +302,10 @@ opencv2/videoio.hpp
 opencv2/highgui/highgui_c.h
 /usr/local/include/opencv2/opencv2/highgui/highgui_c.h
 
+/usr/local/include/opencv2/highgui/highgui.hpp
+opencv2/highgui.hpp
+/usr/local/include/opencv2/highgui/opencv2/highgui.hpp
+
 /usr/local/include/opencv2/highgui/highgui_c.h
 opencv2/core/core_c.h
 /usr/local/include/opencv2/highgui/opencv2/core/core_c.h
@@ -361,6 +359,10 @@ opencv2/highgui.hpp
 /usr/local/include/opencv2/opencv2/highgui.hpp
 opencv2/imgproc/imgproc_c.h
 /usr/local/include/opencv2/opencv2/imgproc/imgproc_c.h
+
+/usr/local/include/opencv2/imgproc/imgproc.hpp
+opencv2/imgproc.hpp
+/usr/local/include/opencv2/imgproc/opencv2/imgproc.hpp
 
 /usr/local/include/opencv2/imgproc/imgproc_c.h
 opencv2/imgproc/types_c.h

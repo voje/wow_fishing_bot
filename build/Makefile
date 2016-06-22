@@ -99,6 +99,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named canny
+
+# Build rule for target.
+canny: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 canny
+.PHONY : canny
+
+# fast build rule for target.
+canny/fast:
+	$(MAKE) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/build
+.PHONY : canny/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -110,6 +123,19 @@ main: cmake_check_build_system
 main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named threshold
+
+# Build rule for target.
+threshold: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 threshold
+.PHONY : threshold
+
+# fast build rule for target.
+threshold/fast:
+	$(MAKE) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/build
+.PHONY : threshold/fast
 
 blob_tracker.o: blob_tracker.cpp.o
 .PHONY : blob_tracker.o
@@ -135,6 +161,54 @@ blob_tracker.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/blob_tracker.cpp.s
 .PHONY : blob_tracker.cpp.s
 
+canny.o: canny.cpp.o
+.PHONY : canny.o
+
+# target to build an object file
+canny.cpp.o:
+	$(MAKE) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/canny.cpp.o
+.PHONY : canny.cpp.o
+
+canny.i: canny.cpp.i
+.PHONY : canny.i
+
+# target to preprocess a source file
+canny.cpp.i:
+	$(MAKE) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/canny.cpp.i
+.PHONY : canny.cpp.i
+
+canny.s: canny.cpp.s
+.PHONY : canny.s
+
+# target to generate assembly for a file
+canny.cpp.s:
+	$(MAKE) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/canny.cpp.s
+.PHONY : canny.cpp.s
+
+canny_tracker.o: canny_tracker.cpp.o
+.PHONY : canny_tracker.o
+
+# target to build an object file
+canny_tracker.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/canny_tracker.cpp.o
+.PHONY : canny_tracker.cpp.o
+
+canny_tracker.i: canny_tracker.cpp.i
+.PHONY : canny_tracker.i
+
+# target to preprocess a source file
+canny_tracker.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/canny_tracker.cpp.i
+.PHONY : canny_tracker.cpp.i
+
+canny_tracker.s: canny_tracker.cpp.s
+.PHONY : canny_tracker.s
+
+# target to generate assembly for a file
+canny_tracker.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/canny_tracker.cpp.s
+.PHONY : canny_tracker.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -159,21 +233,56 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+threshold.o: threshold.cpp.o
+.PHONY : threshold.o
+
+# target to build an object file
+threshold.cpp.o:
+	$(MAKE) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/threshold.cpp.o
+.PHONY : threshold.cpp.o
+
+threshold.i: threshold.cpp.i
+.PHONY : threshold.i
+
+# target to preprocess a source file
+threshold.cpp.i:
+	$(MAKE) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/threshold.cpp.i
+.PHONY : threshold.cpp.i
+
+threshold.s: threshold.cpp.s
+.PHONY : threshold.s
+
+# target to generate assembly for a file
+threshold.cpp.s:
+	$(MAKE) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/threshold.cpp.s
+.PHONY : threshold.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... canny"
 	@echo "... edit_cache"
 	@echo "... main"
 	@echo "... rebuild_cache"
+	@echo "... threshold"
 	@echo "... blob_tracker.o"
 	@echo "... blob_tracker.i"
 	@echo "... blob_tracker.s"
+	@echo "... canny.o"
+	@echo "... canny.i"
+	@echo "... canny.s"
+	@echo "... canny_tracker.o"
+	@echo "... canny_tracker.i"
+	@echo "... canny_tracker.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... threshold.o"
+	@echo "... threshold.i"
+	@echo "... threshold.s"
 .PHONY : help
 
 

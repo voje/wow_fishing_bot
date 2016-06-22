@@ -53,13 +53,48 @@ CMAKE_SOURCE_DIR = /home/kristjan/git/wow_fishing_bot/src
 CMAKE_BINARY_DIR = /home/kristjan/git/wow_fishing_bot/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/canny.dir
+
+# All Build rule for target.
+CMakeFiles/canny.dir/all:
+	$(MAKE) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/depend
+	$(MAKE) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles  1
+	@echo "Built target canny"
+.PHONY : CMakeFiles/canny.dir/all
+
+# Include target in all.
+all: CMakeFiles/canny.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/canny.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristjan/git/wow_fishing_bot/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/canny.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristjan/git/wow_fishing_bot/build/CMakeFiles 0
+.PHONY : CMakeFiles/canny.dir/rule
+
+# Convenience name for target.
+canny: CMakeFiles/canny.dir/rule
+.PHONY : canny
+
+# clean rule for target.
+CMakeFiles/canny.dir/clean:
+	$(MAKE) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/clean
+.PHONY : CMakeFiles/canny.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/canny.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
 CMakeFiles/main.dir/all:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles  1 2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles  2 3 4
 	@echo "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
@@ -69,7 +104,7 @@ all: CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristjan/git/wow_fishing_bot/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristjan/git/wow_fishing_bot/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristjan/git/wow_fishing_bot/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
@@ -85,6 +120,41 @@ CMakeFiles/main.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/main.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/threshold.dir
+
+# All Build rule for target.
+CMakeFiles/threshold.dir/all:
+	$(MAKE) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/depend
+	$(MAKE) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles  5
+	@echo "Built target threshold"
+.PHONY : CMakeFiles/threshold.dir/all
+
+# Include target in all.
+all: CMakeFiles/threshold.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/threshold.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristjan/git/wow_fishing_bot/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/threshold.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristjan/git/wow_fishing_bot/build/CMakeFiles 0
+.PHONY : CMakeFiles/threshold.dir/rule
+
+# Convenience name for target.
+threshold: CMakeFiles/threshold.dir/rule
+.PHONY : threshold
+
+# clean rule for target.
+CMakeFiles/threshold.dir/clean:
+	$(MAKE) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/clean
+.PHONY : CMakeFiles/threshold.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/threshold.dir/clean
 .PHONY : clean
 
 #=============================================================================

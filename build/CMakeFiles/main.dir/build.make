@@ -95,16 +95,41 @@ CMakeFiles/main.dir/blob_tracker.cpp.o.provides: CMakeFiles/main.dir/blob_tracke
 
 CMakeFiles/main.dir/blob_tracker.cpp.o.provides.build: CMakeFiles/main.dir/blob_tracker.cpp.o
 
+CMakeFiles/main.dir/canny_tracker.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/canny_tracker.cpp.o: /home/kristjan/git/wow_fishing_bot/src/canny_tracker.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/canny_tracker.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/canny_tracker.cpp.o -c /home/kristjan/git/wow_fishing_bot/src/canny_tracker.cpp
+
+CMakeFiles/main.dir/canny_tracker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/canny_tracker.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristjan/git/wow_fishing_bot/src/canny_tracker.cpp > CMakeFiles/main.dir/canny_tracker.cpp.i
+
+CMakeFiles/main.dir/canny_tracker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/canny_tracker.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristjan/git/wow_fishing_bot/src/canny_tracker.cpp -o CMakeFiles/main.dir/canny_tracker.cpp.s
+
+CMakeFiles/main.dir/canny_tracker.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/canny_tracker.cpp.o.requires
+
+CMakeFiles/main.dir/canny_tracker.cpp.o.provides: CMakeFiles/main.dir/canny_tracker.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/canny_tracker.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/canny_tracker.cpp.o.provides
+
+CMakeFiles/main.dir/canny_tracker.cpp.o.provides.build: CMakeFiles/main.dir/canny_tracker.cpp.o
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
-"CMakeFiles/main.dir/blob_tracker.cpp.o"
+"CMakeFiles/main.dir/blob_tracker.cpp.o" \
+"CMakeFiles/main.dir/canny_tracker.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/blob_tracker.cpp.o
+main: CMakeFiles/main.dir/canny_tracker.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: /usr/local/lib/libopencv_xphoto.so.3.1.0
 main: /usr/local/lib/libopencv_xobjdetect.so.3.1.0
@@ -172,6 +197,7 @@ CMakeFiles/main.dir/build: main
 
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/main.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/blob_tracker.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/canny_tracker.cpp.o.requires
 .PHONY : CMakeFiles/main.dir/requires
 
 CMakeFiles/main.dir/clean:
