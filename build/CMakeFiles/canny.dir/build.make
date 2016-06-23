@@ -105,6 +105,7 @@ canny: /usr/local/lib/libopencv_ccalib.so.3.1.0
 canny: /usr/local/lib/libopencv_bioinspired.so.3.1.0
 canny: /usr/local/lib/libopencv_bgsegm.so.3.1.0
 canny: /usr/local/lib/libopencv_aruco.so.3.1.0
+canny: /usr/local/lib/libopencv_viz.so.3.1.0
 canny: /usr/local/lib/libopencv_videostab.so.3.1.0
 canny: /usr/local/lib/libopencv_videoio.so.3.1.0
 canny: /usr/local/lib/libopencv_video.so.3.1.0

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kristjan/git/wow_fishing_bot/src/time_series.cpp
+time_series.h
+/home/kristjan/git/wow_fishing_bot/src/time_series.h
+cmath
+-
+
+/home/kristjan/git/wow_fishing_bot/src/time_series.h
+iostream
+-
+vector
+-
+numeric
+-
+

@@ -158,6 +158,41 @@ clean: CMakeFiles/threshold.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/time_series.dir
+
+# All Build rule for target.
+CMakeFiles/time_series.dir/all:
+	$(MAKE) -f CMakeFiles/time_series.dir/build.make CMakeFiles/time_series.dir/depend
+	$(MAKE) -f CMakeFiles/time_series.dir/build.make CMakeFiles/time_series.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristjan/git/wow_fishing_bot/build/CMakeFiles  6
+	@echo "Built target time_series"
+.PHONY : CMakeFiles/time_series.dir/all
+
+# Include target in all.
+all: CMakeFiles/time_series.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/time_series.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristjan/git/wow_fishing_bot/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/time_series.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristjan/git/wow_fishing_bot/build/CMakeFiles 0
+.PHONY : CMakeFiles/time_series.dir/rule
+
+# Convenience name for target.
+time_series: CMakeFiles/time_series.dir/rule
+.PHONY : time_series
+
+# clean rule for target.
+CMakeFiles/time_series.dir/clean:
+	$(MAKE) -f CMakeFiles/time_series.dir/build.make CMakeFiles/time_series.dir/clean
+.PHONY : CMakeFiles/time_series.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/time_series.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.
