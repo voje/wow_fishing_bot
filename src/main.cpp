@@ -54,9 +54,25 @@ int main(int argc, char** argv){
 	//BlobTracker tracker;
 	CannyTracker tracker;
 	Mat frame;
+	bool go_samples = false;
 
 	if(argc >= 2){
-		for(int i=1; i<=atoi(argv[1]); i++){
+		int index = 1;
+		while(index < argc){
+			string a1 = argv[index];	
+			index ++;
+			if(a1.compare("-c") == 0){
+				string a2 = argv[index];
+				index ++;
+				tracker.set_color(a2);
+			}else{
+				go_samples = true;
+			}
+		}
+	}
+
+	if(go_samples){
+		for(int i=1; i<=9; i++){
 			string num(1,  char(i+48));
 			string pt1 = "fishing";
 			string pt2 = ".png";

@@ -7,6 +7,18 @@ using namespace std;
 CannyTracker::CannyTracker(){
 	this->bobber_point = Point(-1, -1);
 	this->bobber_speed = -1;
+	this->color = 0;	//BGR
+}
+
+void CannyTracker::set_color(string color){
+	char first = color.at(0);
+	if(first == 'b'){
+		this->color = 0;
+	}else if(first == 'g'){
+		this->color = 1;
+	}else{
+		this->color = 2;
+	}
 }
 
 Point CannyTracker::get_bobber_point(){
@@ -58,17 +70,29 @@ void CannyTracker::find_mid_point(Mat& frame){
 }
 
 void CannyTracker::track_bobber(Mat& frame, bool visualize){
-	cvtColor(frame, frame, CV_BGR2GRAY);
-	//frame should be gray
+	Mat planes[3];
+	split(frame, planes);
+	int p1 = this->color;
+	int p2 = (p1+1)%3;
+	int p3 = (p2+1)%3;
+	frame = planes[p1];
+	//subtract(frame, planes[p2], frame);
+	//subtract(frame, planes[p3], frame);
+	subtract(frame, planes[1], frame);
+	/*
+	imshow("sadf", frame);
+	waitKey(0);
+	visualize = false;
+	*/
 	Mat detected_edges;
 	blur(frame, detected_edges, Size(3,3));
-	int low_threshold = 90;
+	int low_threshold = 20;
 	int ratio = 4;
 	int kernel_size = 3;
 	Canny(detected_edges, detected_edges, low_threshold, low_threshold*ratio, kernel_size);
 	//do some morph
 	int morph_size = 10;
-	Mat element = getStructuringElement(0, Size(2*morph_size+1, 2*morph_size+1), Point(morph_size,morph_size));
+	Mat element = getStructuringElement(2, Size(2*morph_size+1, 2*morph_size+1), Point(morph_size,morph_size));
 	morphologyEx(detected_edges, detected_edges, 1, element);
 
 	this->find_mid_point(detected_edges);
