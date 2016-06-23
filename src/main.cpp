@@ -1,5 +1,6 @@
 #include "canny_tracker.h"
 #include "blob_tracker.h"
+#include "time_series.h"
 #include <iostream>
 #include <X11/Xlib.h>
 #include <X11/X.h>
@@ -7,6 +8,7 @@
 #include <opencv2/imgproc.hpp>
 #include <string>
 #include <unistd.h>
+#include <ctime>
 
 using namespace std;
 
@@ -95,25 +97,53 @@ int main(int argc, char** argv){
 	sleep(3);
 
 	//if not testing
-	while(True){
-		//screenshot
-		ImageFromDisplay(frame);
-		cvtColor(frame, frame, CV_BGRA2BGR);
+	const double SESSION_TIME = 60*1.5;
+	const int FREQ = 150;	//ms
+	const double DEV_THRESHOLD = 3;
+	double t_diff;
+	time_t t_session = time(NULL);
+	bool b_session = true;
+	while(b_session){
+		time_t t_throw = time(NULL);
+		bool b_throw = true;
+		TimeSeries ts;
+		double dev = -1;
+		system("bash ../key_press.sh THROW");
+		sleep(5);
+		cout << "search" << endl;
+		while(b_throw){
+			//fishing here
+			ImageFromDisplay(frame);
+			cvtColor(frame, frame, CV_BGRA2BGR);
+			tracker.track_bobber(frame, false);	
+			Point p = tracker.get_bobber_point();
+			//move mouse
+			if(p.y != -1){
+				string xstring = my_int_to_string(p.x-15);
+				string ystring = my_int_to_string(p.y+15);
+				string system_command = "bash ../key_press.sh MOUSEMOVE " + xstring + " " + ystring;
+				system(system_command.c_str());
+			}
 
-		tracker.track_bobber(frame, false);	
-		cout << "(" << tracker.get_bobber_point() << ") [" << tracker.get_bobber_speed() << "]" << endl;
-		Point p = tracker.get_bobber_point();
-		if(p.x >= 0 && p.y >= 0){
-			string xstring = my_int_to_string(p.x);
-			string ystring = my_int_to_string(p.y);
-			string system_command = "bash ../key_press.sh MOUSEMOVE ";
-			system_command += xstring;
-			system_command += " ";
-			system_command += ystring;
-			system(system_command.c_str());
+			if(p.y != -1){
+				dev = ts.new_sample(p.y);
+			}
+
+			t_diff = difftime(time(NULL), t_throw);
+			if(t_diff >= 12 && ts.is_collecting()){
+				ts.set_collecting(false);	//stop collecting data, analyze it
+			}else if(t_diff >= 30){
+				b_throw = false;
+			}else if(dev > DEV_THRESHOLD){
+				system("bash ../key_press.sh LOOT");
+				b_throw = false;
+			}
+			waitKey(FREQ);
 		}
-
-		waitKey(300);	//delay in ms
+		t_diff = difftime(time(NULL), t_throw);
+		if(t_diff >= SESSION_TIME){
+			b_throw = false;
+		}
 	}
 
 	return 0;

@@ -14,7 +14,6 @@ fi
 
 case "$1" in
 	"MOUSEMOVE")
-		echo "mousemove"
 		xdotool mousemove "$2" "$3"
 		;;
 	"LOOT")
@@ -23,6 +22,10 @@ case "$1" in
 		xdotool click 3
 		sleep 0.5s
 		xdotool keyup Shift 
+		;;
+	"THROW")
+		echo "throwing"
+		xdotool key r
 		;;
 	*)
 		echo "error: Undefined command."

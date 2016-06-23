@@ -7,6 +7,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/kristjan/git/wow_fishing_bot/src/blob_tracker.cpp" "/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/main.dir/blob_tracker.cpp.o"
   "/home/kristjan/git/wow_fishing_bot/src/canny_tracker.cpp" "/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/main.dir/canny_tracker.cpp.o"
   "/home/kristjan/git/wow_fishing_bot/src/main.cpp" "/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/main.dir/main.cpp.o"
+  "/home/kristjan/git/wow_fishing_bot/src/time_series.cpp" "/home/kristjan/git/wow_fishing_bot/build/CMakeFiles/main.dir/time_series.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

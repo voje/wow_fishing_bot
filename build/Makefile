@@ -137,19 +137,6 @@ threshold/fast:
 	$(MAKE) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/build
 .PHONY : threshold/fast
 
-#=============================================================================
-# Target rules for targets named time_series
-
-# Build rule for target.
-time_series: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 time_series
-.PHONY : time_series
-
-# fast build rule for target.
-time_series/fast:
-	$(MAKE) -f CMakeFiles/time_series.dir/build.make CMakeFiles/time_series.dir/build
-.PHONY : time_series/fast
-
 blob_tracker.o: blob_tracker.cpp.o
 .PHONY : blob_tracker.o
 
@@ -275,7 +262,7 @@ time_series.o: time_series.cpp.o
 
 # target to build an object file
 time_series.cpp.o:
-	$(MAKE) -f CMakeFiles/time_series.dir/build.make CMakeFiles/time_series.dir/time_series.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/time_series.cpp.o
 .PHONY : time_series.cpp.o
 
 time_series.i: time_series.cpp.i
@@ -283,7 +270,7 @@ time_series.i: time_series.cpp.i
 
 # target to preprocess a source file
 time_series.cpp.i:
-	$(MAKE) -f CMakeFiles/time_series.dir/build.make CMakeFiles/time_series.dir/time_series.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/time_series.cpp.i
 .PHONY : time_series.cpp.i
 
 time_series.s: time_series.cpp.s
@@ -291,7 +278,7 @@ time_series.s: time_series.cpp.s
 
 # target to generate assembly for a file
 time_series.cpp.s:
-	$(MAKE) -f CMakeFiles/time_series.dir/build.make CMakeFiles/time_series.dir/time_series.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/time_series.cpp.s
 .PHONY : time_series.cpp.s
 
 # Help Target
@@ -305,7 +292,6 @@ help:
 	@echo "... main"
 	@echo "... rebuild_cache"
 	@echo "... threshold"
-	@echo "... time_series"
 	@echo "... blob_tracker.o"
 	@echo "... blob_tracker.i"
 	@echo "... blob_tracker.s"

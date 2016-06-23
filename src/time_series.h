@@ -19,6 +19,7 @@ public:
 	void analyze();
 	double get_std_dev();
 	void set_collecting(bool);
+	bool is_collecting();
 };
 
 #endif

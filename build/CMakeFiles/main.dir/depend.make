@@ -116,6 +116,7 @@ CMakeFiles/main.dir/canny_tracker.cpp.o: /usr/local/include/opencv2/xfeatures2d/
 CMakeFiles/main.dir/main.cpp.o: /home/kristjan/git/wow_fishing_bot/src/blob_tracker.h
 CMakeFiles/main.dir/main.cpp.o: /home/kristjan/git/wow_fishing_bot/src/canny_tracker.h
 CMakeFiles/main.dir/main.cpp.o: /home/kristjan/git/wow_fishing_bot/src/main.cpp
+CMakeFiles/main.dir/main.cpp.o: /home/kristjan/git/wow_fishing_bot/src/time_series.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv/cxcore.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/calib3d.hpp
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/calib3d/calib3d_c.h
@@ -169,4 +170,7 @@ CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/videoio.hpp
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/videoio/videoio_c.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/xfeatures2d.hpp
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
+
+CMakeFiles/main.dir/time_series.cpp.o: /home/kristjan/git/wow_fishing_bot/src/time_series.cpp
+CMakeFiles/main.dir/time_series.cpp.o: /home/kristjan/git/wow_fishing_bot/src/time_series.h
 

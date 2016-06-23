@@ -35,6 +35,11 @@ void TimeSeries::set_collecting(bool b){
 	this->collecting = b;
 }
 
+bool TimeSeries::is_collecting(){
+	return this->collecting;
+}
+
+/* for testing
 int main(int argc, char** argv){
 	TimeSeries ts;
 	int my_ints[] = {5,6,4,7,5,3};
@@ -46,3 +51,4 @@ int main(int argc, char** argv){
 	cout << ts.new_sample(6) << endl;
 	return 0;
 }
+*/
