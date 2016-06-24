@@ -48,18 +48,23 @@ void CannyTracker::find_mid_point(Mat& frame){
 		}
 	}
 
+	//first go down, than go up and right
+	bool down = true;
+	while(down && best_point.x >= 0){
+		if(frame.at<unsigned char>(best_point + Point(1, 1)) != 0){
+			best_point = best_point + Point(1, 1);
+		}else{
+			down = false;
+		}
+	}
 	bool up = true;
 	while(up && best_point.x >= 0){
-		if(frame.at<unsigned char>(best_point + Point(-1, -1)) != 0){
-			best_point = best_point + Point(-1, -1);
+		if(frame.at<unsigned char>(best_point + Point(1, -1)) != 0){
+			best_point = best_point + Point(1, -1);
 		}else if(frame.at<unsigned char>(best_point + Point(0, -1)) != 0){
 			best_point = best_point + Point(0, -1);
-		}else if(frame.at<unsigned char>(best_point + Point(1, -1)) != 0){
-			best_point = best_point + Point(1, -1);
-		}else if(frame.at<unsigned char>(best_point + Point(10, 0)) != 0){
-			best_point = best_point + Point(10, 0);
-		}else if(frame.at<unsigned char>(best_point + Point(20, 0)) != 0){
-			best_point = best_point + Point(20, 0);
+		}else if(frame.at<unsigned char>(best_point + Point(-5, -1)) != 0){
+			best_point = best_point + Point(-5, -1);
 		}else{
 			up = false;
 		}

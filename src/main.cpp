@@ -97,7 +97,7 @@ int main(int argc, char** argv){
 	sleep(3);
 
 	//if not testing
-	const double SESSION_TIME = 60*1.5;
+	const double SESSION_TIME = 60*5;
 	const int FREQ = 150;	//ms
 	const double DEV_THRESHOLD = 3;
 	double t_diff;
@@ -140,7 +140,7 @@ int main(int argc, char** argv){
 			}
 			waitKey(FREQ);
 		}
-		t_diff = difftime(time(NULL), t_throw);
+		t_diff = difftime(time(NULL), t_session);
 		if(t_diff >= SESSION_TIME){
 			b_throw = false;
 		}
