@@ -120,7 +120,7 @@ int main(int argc, char** argv){
 			//move mouse
 			if(p.y != -1){
 				string xstring = my_int_to_string(p.x-15);
-				string ystring = my_int_to_string(p.y+15);
+				string ystring = my_int_to_string(p.y+25);
 				string system_command = "bash ../key_press.sh MOUSEMOVE " + xstring + " " + ystring;
 				system(system_command.c_str());
 			}

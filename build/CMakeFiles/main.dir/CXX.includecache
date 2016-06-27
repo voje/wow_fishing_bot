@@ -6,12 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/kristjan/git/wow_fishing_bot/src/canny_tracker.cpp
-canny_tracker.h
-/home/kristjan/git/wow_fishing_bot/src/canny_tracker.h
-limits
+/home/kristjan/git/wow_fishing_bot/src/blob_tracker.h
+opencv2/features2d.hpp
+/home/kristjan/git/wow_fishing_bot/src/opencv2/features2d.hpp
+opencv2/core.hpp
 -
-iostream
+opencv2/highgui.hpp
 -
 
 /home/kristjan/git/wow_fishing_bot/src/canny_tracker.h
@@ -20,6 +20,38 @@ opencv2/core.hpp
 opencv2/imgproc.hpp
 -
 opencv2/highgui.hpp
+-
+
+/home/kristjan/git/wow_fishing_bot/src/main.cpp
+canny_tracker.h
+/home/kristjan/git/wow_fishing_bot/src/canny_tracker.h
+blob_tracker.h
+/home/kristjan/git/wow_fishing_bot/src/blob_tracker.h
+time_series.h
+/home/kristjan/git/wow_fishing_bot/src/time_series.h
+iostream
+-
+X11/Xlib.h
+-
+X11/X.h
+-
+X11/Xutil.h
+-
+opencv2/imgproc.hpp
+-
+string
+-
+unistd.h
+-
+ctime
+-
+
+/home/kristjan/git/wow_fishing_bot/src/time_series.h
+iostream
+-
+vector
+-
+numeric
 -
 
 /usr/local/include/opencv/cxcore.h

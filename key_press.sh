@@ -19,13 +19,14 @@ case "$1" in
 	"LOOT")
 		echo "loot"
 		xdotool keydown Shift
+		sleep 0.5s
 		xdotool click 3
 		sleep 0.5s
 		xdotool keyup Shift 
 		;;
 	"THROW")
 		echo "throwing"
-		xdotool key r
+		xdotool key 7 
 		;;
 	*)
 		echo "error: Undefined command."
