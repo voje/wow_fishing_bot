@@ -7,19 +7,19 @@
 
 using namespace std;
 
-class TimeSeries{
+class TimeSeries {
 private:
-	vector<double> samples;
-	double mean;
-	double std_dev;
-	bool collecting;
+    vector<double> samples;
+    double mean;
+    double std_dev;
+    bool collecting;
 public:
-	TimeSeries();
-	double new_sample(double s);
-	void analyze();
-	double get_std_dev();
-	void set_collecting(bool);
-	bool is_collecting();
+    TimeSeries();
+    double new_sample(double s);
+    void analyze();
+    double get_std_dev();
+    void set_collecting(bool);
+    bool is_collecting();
 };
 
 #endif

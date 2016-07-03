@@ -8,18 +8,18 @@
 using namespace cv;
 using namespace std;
 
-class CannyTracker{
+class CannyTracker {
 private:
-	Point bobber_point;
-	double bobber_speed;
-	int color;
+    Point bobber_point;
+    double bobber_speed;
+    int color;
 public:
-	CannyTracker();
-	Point get_bobber_point();
-	double get_bobber_speed();
-	void track_bobber(Mat&, bool);			
-	void find_mid_point(Mat&);
-	void set_color(string);
+    CannyTracker();
+    Point get_bobber_point();
+    double get_bobber_speed();
+    void track_bobber(Mat&, bool);
+    void find_mid_point(Mat&);
+    void set_color(string);
 };
 
 #endif

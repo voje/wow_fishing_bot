@@ -8,17 +8,17 @@
 using namespace cv;
 using namespace std;
 
-class BlobTracker{
+class BlobTracker {
 private:
-	Ptr<SimpleBlobDetector> sbd;
-	Point2f bobber_point;
-	double bobber_speed;
+    Ptr<SimpleBlobDetector> sbd;
+    Point2f bobber_point;
+    double bobber_speed;
 public:
-	BlobTracker();
-	void track_bobber(Mat&);
-	void find_center_keypoint(Mat&, vector<KeyPoint>&);
-	Point get_bobber_point();
-	double get_bobber_speed();
+    BlobTracker();
+    void track_bobber(Mat&);
+    void find_center_keypoint(Mat&, vector<KeyPoint>&);
+    Point get_bobber_point();
+    double get_bobber_speed();
 };
 
 #endif
