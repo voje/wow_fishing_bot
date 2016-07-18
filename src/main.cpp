@@ -132,8 +132,10 @@ int main(int argc, char** argv) {
             t_diff = difftime(time(NULL), t_throw);
             if (t_diff >= 12 && ts.is_collecting()) {
                 ts.set_collecting(false);	//stop collecting data, analyze it
-                if (ts.get_std_dev() <= 0)
+                if (!ts.get_std_dev()) {
                     b_throw = false;
+		    cout << "retrying" << endl;
+		}
             } else if (t_diff >= 30) {
                 b_throw = false;
             } else if (dev > DEV_THRESHOLD) {
